@@ -27,11 +27,11 @@ public class AlertsTest {
     public void jsAlerts() {
         driver.findElement(By.cssSelector("[onclick = 'jsPrompt()']")).click();
         Alert alert = driver.switchTo().alert();
-        alert.sendKeys("asasa");
+        alert.sendKeys("fool");
         alert.accept();
         driver.switchTo().defaultContent();
         String result = driver.findElement(By.id("result")).getText();
-        assertEquals(result, "You entered: asasa", "Entered text doesn't correspond to the displayed");
+        assertEquals(result, "You entered: fool", "Entered text doesn't correspond to the displayed");
     }
 
     @Test
